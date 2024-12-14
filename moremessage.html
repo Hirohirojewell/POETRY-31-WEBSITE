@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONLY FOR JEWELL</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #005aa7, #fffde4);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        /* Navigation bar with header text */
+        nav {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        nav h1 {
+            color: #ff6f61; /* Christmas red */
+            font-size: 1.8em;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 10px 0 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1em;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff6f61;
+        }
+
+        /* Header padding adjustment for fixed nav */
+        header {
+            text-align: center;
+            padding: 120px 20px 30px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: #00ff00; /* Christmas green */
+        }
+
+        /* Container for images and message */
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            max-width: 90%;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+            border: 5px solid #ddd;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        img:hover {
+            border-color: #ff6f61;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 1.2em;
+            display: none;
+            color: #008000; /* Christmas green */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Back button */
+        #backButton {
+            display: none;
+            margin-top: 20px;
+            padding: 10px 15px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #ff6f61;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #backButton:hover {
+            background-color: #ff3b3b;
+        }
+
+        /* Snowflake animation */
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            font-size: 1em;
+            color: white;
+            animation-name: fall;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav h1 {
+                font-size: 1.5em;
+            }
+
+            nav ul li a {
+                font-size: 0.9em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            #message {
+                font-size: 1em;
+            }
+
+            #backButton {
+                padding: 8px 12px;
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav h1 {
+                font-size: 1.3em;
+            }
+
+            nav ul li {
+                margin: 0 5px;
+            }
+
+            nav ul li a {
+                font-size: 0.8em;
+            }
+
+            header p {
+                font-size: 0.9em;
+            }
+
+            #message {
+                font-size: 0.9em;
+            }
+
+            #backButton {
+                padding: 6px 10px;
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar with header -->
+    <nav>
+        <h1>Hiii, My Love!</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="moremessage.html">Message</a></li>
+       </ul>
+    </nav>
+
+    <!-- Header section -->
+    <header>
+        <p>Click the images to reveal more messages for us!</p>
+    </header>
+
+    <!-- See-through container -->
+    <div class="container">
+        <img id="pic1" src="pic1.gif" alt="Picture 1" onclick="showPic2()">
+        <img id="pic2" src="pic2.gif" alt="Picture 2" onclick="showMessage()" style="display: none;">
+        <div id="message">HIII LOVE, I'm so happy kay gi pili mo gid ko :* lab ot naman ta christmas kanami ka akonnn december because of you, I'm hoping that you will continue to stay :* I REALLY LOVE YOU SO MUCH</div>
+        <button id="backButton" onclick="goBack()">Back</button>
+    </div>
+
+    <!-- JavaScript for interaction -->
+    <script>
+        function showPic2() {
+            document.getElementById('pic1').style.display = 'none';
+            document.getElementById('pic2').style.display = 'block';
+        }
+
+        function showMessage() {
+            document.getElementById('pic2').style.display = 'none';
+            document.getElementById('message').style.display = 'block';
+            document.getElementById('backButton').style.display = 'inline-block';
+        }
+
+        function goBack() {
+            document.getElementById('message').style.display = 'none';
+            document.getElementById('backButton').style.display = 'none';
+            document.getElementById('pic2').style.display = 'block';
+        }
+
+        // Optimized snowflakes (10 flakes per cycle)
+        function createSnowflakes() {
+            const body = document.body;
+            for (let i = 0; i < 10; i++) { // Reduced to 10 flakes per cycle
+                const snowflake = document.createElement('div');
+                snowflake.classList.add('snowflake');
+                snowflake.innerHTML = '❄️';
+                snowflake.style.left = `${Math.random() * 100}vw`;
+                snowflake.style.animationDuration = `${3 + Math.random() * 3}s`;
+                snowflake.style.fontSize = `${10 + Math.random() * 20}px`;
+                snowflake.style.animationDelay = `${Math.random() * 5}s`;
+                body.appendChild(snowflake);
+
+                // Remove snowflake after animation ends
+                snowflake.addEventListener('animationend', () => snowflake.remove());
+            }
+        }
+
+        // Create snowflakes continuously
+        setInterval(createSnowflakes, 1500);
+    </script>
+</body>
+</html>

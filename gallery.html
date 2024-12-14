@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR JEWELL</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #005aa7, #fffde4);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        /* Navigation bar with header text */
+        nav {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        nav h1 {
+            color: #ff6f61; /* Christmas red */
+            font-size: 1.8em;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 10px 0 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1em;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff6f61;
+        }
+
+        /* Header padding adjustment for fixed nav */
+        header {
+            text-align: center;
+            padding: 120px 20px 30px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: #00ff00; /* Christmas green */
+        }
+
+        /* Container for images */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 90%;
+            margin: 20px auto;
+            overflow-y: auto; /* Scrollable container */
+            max-height: calc(100vh - 120px); /* Adjusted height based on nav and header height */
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            border: 5px solid #ddd;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        img:hover {
+            border-color: #ff6f61;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav h1 {
+                font-size: 1.5em;
+            }
+
+            nav ul li a {
+                font-size: 0.9em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav h1 {
+                font-size: 1.3em;
+            }
+
+            nav ul li {
+                margin: 0 5px;
+            }
+
+            nav ul li a {
+                font-size: 0.8em;
+            }
+
+            header p {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar with header -->
+    <nav>
+        <h1>Hiii, My Love! this is us</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="moremessage.html">Message</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header section -->
+    <header>
+        <p>Cute GIF's for u I'm kissing u! Enjoy the gallery.</p>
+    </header>
+
+    <!-- Gallery Container -->
+    <div class="gallery-container">
+        <img src="pic3.gif" alt="Picture 3">
+        <img src="pic4.gif" alt="Picture 4">
+        <img src="pic5.gif" alt="Picture 5">
+        <img src="pic6.gif" alt="Picture 6">
+        <img src="pic7.gif" alt="Picture 7">
+        <img src="pic8.gif" alt="Picture 8">
+        <img src="pic9.gif" alt="Picture 9">
+    </div>
+
+    <!-- JavaScript for interaction (none needed for this page) -->
+
+</body>
+</html>
